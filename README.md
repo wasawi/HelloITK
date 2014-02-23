@@ -1,7 +1,7 @@
-This file explains how I runed this example:
+###This file explains how I runed this example:
 http://www.vtk.org/Wiki/ITK/HelloInsight
 
-First install ITK.
+###First install ITK.
 follow the instructions [here](INSTALLING ITK and VTK)
 
 Then clone this git into openFrameworks/apps/myApps and do the following:
