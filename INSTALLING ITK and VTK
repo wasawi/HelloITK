@@ -1,0 +1,77 @@
+INSTALLING ITK and VTK
+
+This process is long.
+Do it whenever you have time. you will have some 
+
+We will try to run this example here:
+--------------------------------------------------------------------------------------
+https://github.com/fbeeper/nifti-vtk
+
+Install CMAKE: (http://www.cmake.org/cmake/resources/software.html)
+Simply extract the file from what download. 
+Double click on the .dmg file. 
+Before finishing, check the option: Install Commond-Line Link
+if cmake comandline tools fail, then do this:
+http://cmake.3232098.n2.nabble.com/Install-Command-Line-Links-Failed-td6567624.html
+
+then do this:
+• This will a the folder VTK-IKT in your home directory:
+cd && mkdir VTK-ITK && cd VTK-ITK
+• This will download vtk and itk and their data 
+git clone git://vtk.org/VTK.git && git clone git://vtk.org/VTKData.git
+git clone git://itk.org/ITK.git && git clone git://itk.org/ITKData.git
+
+Open Cmake:
+In the top two lines, 
+set Source code as  /Users/wswi/VTK-ITK/ITK
+set the binaries as  /Users/wswi/VTK-ITK/ITK_bin
+click configure.
+(it iwll ask you to create the directory, yes)
+(use default native compliers, yes)
+click configure again until everything goes white (not red)
+click on advanced
+check build examples
+check Module_ITKVtkGlue
+Generate
+Be careful.. it seems that cmake throws "Generating done" but is still doing things. Make sure he is done.. (check Activity monitor or something.. (can't believe what im saing... ) and then close it).
+close Cmake.
+
+Do the same for VTK:
+Module_ITKVtkGlue will not be there, ok no need to check it. But check the examples ;)
+
+After running both cmakes:
+Open Xcode projects (this takes a while too, be patient .. .. .. AKSA!#!@|##¢@$!!.. yes a bit more until Xcode has done EVERYTHING!! ).
+Build Xcode projects. It will take a while. again.. cut your nails.
+
+After finishing you will find your applications here:
+VTK-ITK/VTK_bin/bin
+VTK-ITK/ITK_bin/bin
+
+open then through terminal in order to see if you need to pass some arguments
+
+If anything goes wrong you can delete the VTK_bin or ITK_bin folder and do the cmake process again. make sure you follow the steps. I had to so it twice.. it seems that xcode is hanging sometimes..
+
+
+Other sources:
+-------------------------------------------------------------------------------------
+if cmake comandline tools fail do this:
+http://cmake.3232098.n2.nabble.com/Install-Command-Line-Links-Failed-td6567624.html
+
+other installation of VTK ITK , Mac and Makefiles
+http://itkdebug.blogspot.no/2013/02/install-itk-on-mac-os.html
+
+
+
+
+
+Building Xcode projects trough terminal
+http://tetontech.wordpress.com/2011/05/26/command-line-building-using-xcode/
+
+
+
+
+
+
+
+
+
